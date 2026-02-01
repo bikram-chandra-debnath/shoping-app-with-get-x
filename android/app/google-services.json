@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "569687570636",
+    "project_id": "shopping-app-with-get-x-a0ade",
+    "storage_bucket": "shopping-app-with-get-x-a0ade.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569687570636:android:04892470f307d6a06f2a69",
+        "android_client_info": {
+          "package_name": "com.example.shopping_app_with_getx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "569687570636-b29alhf8tu198cffssjdv1o7l6memkch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDk4GZLmgojWN7hL34YooSUpVbLdfR1tSY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "569687570636-b29alhf8tu198cffssjdv1o7l6memkch.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "569687570636-ekvu0vkbn6snlfcocji7e3kni0d6ibao.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.shoppingAppWithGetx"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
