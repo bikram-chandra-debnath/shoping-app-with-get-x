@@ -2,6 +2,11 @@ class AppImages {
   AppImages._();
 
 
+  // common
+
+  static const String loadingAnimation = "assets/animations/loading.json";
+
+
   // Profile
 
   static const String userProfile = "assets/logo/profile.png";
