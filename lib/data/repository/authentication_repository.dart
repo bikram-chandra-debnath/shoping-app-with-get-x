@@ -19,7 +19,7 @@ class AuthenticationRepository extends GetxController {
     if (storage.read("isFirstTime") == true) {
       Get.to(() => OnboardingScreen());
     } else {
-      Get.to(() => LoginScreen());
+      Get.offAll(() => LoginScreen());
     }
   }
 }
