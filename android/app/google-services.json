@@ -7,7 +7,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:569687570636:android:04892470f307d6a06f2a69",
+        "mobilesdk_app_id": "1:569687570636:android:3221669b74a2a49a6f2a69",
         "android_client_info": {
           "package_name": "com.example.shopping_app_with_getx"
         }
