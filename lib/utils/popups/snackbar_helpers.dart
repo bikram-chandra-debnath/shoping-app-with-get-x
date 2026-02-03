@@ -27,7 +27,7 @@ class AppSnackbarHelper {
     Get.snackbar(
       title,
       message,
-      duration: duration,
+      duration:Duration(seconds: duration) ,
       isDismissible: true,
       shouldIconPulse: true,
       colorText: AppColors.white,

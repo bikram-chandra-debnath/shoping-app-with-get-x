@@ -1,8 +1,10 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shopping_app_with_getx/common/style/padding.dart';
 import 'package:shopping_app_with_getx/common/widgets/login_and_signup/app_form_divider.dart';
+import 'package:shopping_app_with_getx/features/authentication/controllers/signup/signup_controller.dart';
 import 'package:shopping_app_with_getx/features/authentication/screens/signup/widgets/sign_up_form.dart';
 import 'package:shopping_app_with_getx/utils/constants/sizes.dart';
 import 'package:shopping_app_with_getx/utils/constants/texts.dart';
@@ -14,6 +16,7 @@ class SignUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(SignupController());
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(onPressed: () {}, icon: Icon(Iconsax.arrow_left)),
