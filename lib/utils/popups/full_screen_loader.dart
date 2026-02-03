@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shopping_app_with_getx/common/widgets/loaders/animation_loader.dart';
 import 'package:shopping_app_with_getx/utils/constants/colors.dart';
+import 'package:shopping_app_with_getx/utils/constants/images.dart';
 import 'package:shopping_app_with_getx/utils/helpers/helper_function.dart';
 
 class AppFullScreenLoader {
-  static void openLoadingDialog(String text, String animation){
+  static void openLoadingDialog(String text,){
     showDialog(context: Get.overlayContext!, 
     barrierDismissible: false,
     builder: (context) => PopScope(
@@ -24,7 +25,7 @@ class AppFullScreenLoader {
 
             // Animation
 
-            AppAnimationLoader(text: text,)
+            AppAnimationLoader(text: AppImages.loadingAnimation,)
             
           ],
         ),
