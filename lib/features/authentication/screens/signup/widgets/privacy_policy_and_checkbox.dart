@@ -24,29 +24,31 @@ class PrivacyPolicyCheckbox extends StatelessWidget {
           ),
         ),
 
-        RichText(
-          text: TextSpan(
-            style: Theme.of(context).textTheme.bodyMedium,
-            children: [
-              TextSpan(text: AppTexts.iAgree),
-              TextSpan(
-                text: AppTexts.privacy,
-                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                  color: dark ? AppColors.white : AppColors.primary,
-                  decoration: TextDecoration.underline,
-                  decorationColor: dark ? AppColors.white : AppColors.primary,
+        Expanded(
+          child: RichText(
+            text: TextSpan(
+              style: Theme.of(context).textTheme.bodyMedium,
+              children: [
+                TextSpan(text: AppTexts.iAgree),
+                TextSpan(
+                  text: AppTexts.privacy,
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                    color: dark ? AppColors.white : AppColors.primary,
+                    decoration: TextDecoration.underline,
+                    decorationColor: dark ? AppColors.white : AppColors.primary,
+                  ),
                 ),
-              ),
-              TextSpan(text: AppTexts.and),
-              TextSpan(
-                text: AppTexts.terms,
-                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                  color: dark ? AppColors.white : AppColors.primary,
-                  decoration: TextDecoration.underline,
-                  decorationColor: dark ? AppColors.white : AppColors.primary,
+                TextSpan(text: AppTexts.and),
+                TextSpan(
+                  text: AppTexts.terms,
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                    color: dark ? AppColors.white : AppColors.primary,
+                    decoration: TextDecoration.underline,
+                    decorationColor: dark ? AppColors.white : AppColors.primary,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ],
