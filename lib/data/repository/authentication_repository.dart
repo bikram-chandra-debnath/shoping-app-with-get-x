@@ -9,7 +9,6 @@ import 'package:shopping_app_with_getx/utils/exceptions/firebase_auth_exception.
 import 'package:shopping_app_with_getx/utils/exceptions/format_exception.dart';
 import 'package:shopping_app_with_getx/utils/exceptions/platform_exception.dart';
 
-
 class AuthenticationRepository extends GetxController {
   static AuthenticationRepository get instance => Get.find();
   final localStorage = GetStorage();
