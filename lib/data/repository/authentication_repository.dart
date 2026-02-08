@@ -8,12 +8,12 @@ import 'package:shopping_app_with_getx/features/authentication/screens/onboardin
 import 'package:shopping_app_with_getx/utils/exceptions/firebase_auth_exception.dart';
 import 'package:shopping_app_with_getx/utils/exceptions/format_exception.dart';
 import 'package:shopping_app_with_getx/utils/exceptions/platform_exception.dart';
-import 'package:shopping_app_with_getx/utils/popups/snackbar_helpers.dart';
+
 
 class AuthenticationRepository extends GetxController {
   static AuthenticationRepository get instance => Get.find();
   final localStorage = GetStorage();
-  final _auth = FirebaseAuth.instance;
+  final auth = FirebaseAuth.instance;
   @override
   void onReady() {
     FlutterNativeSplash.remove();
@@ -34,24 +34,19 @@ class AuthenticationRepository extends GetxController {
   
   Future<UserCredential> registerUser( String email, password) async {
   try {
-    UserCredential userCredential = await _auth.createUserWithEmailAndPassword(
+    UserCredential userCredential = await auth.createUserWithEmailAndPassword(
       email: email,
       password: password,
     );
     return userCredential;
-  } on FirebaseAuthException catch (e) {
+  } on PlatformException catch (e) {
+    throw AppPlatformException(e.code).message;       
+  } on FirebaseAuthException  catch (e) {
     throw AppFirebaseAuthException(e.code).message;
   } on FirebaseException catch (e) {
-    if (e.code == 'email-already-in-use') {
-    
-  }
-
     throw AppFirebaseAuthException(e.code).message;
   } on FormatException {
     throw AppFormatException();
-  } on PlatformException catch (e) {
-
-    throw AppPlatformException(e.code).message;       
   } catch (e) {
     throw Exception("Something went wrong. Please try again");
   }

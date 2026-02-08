@@ -16,6 +16,7 @@ class SignUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     final controller = Get.put(SignupController());
     return Scaffold(
       appBar: AppBar(

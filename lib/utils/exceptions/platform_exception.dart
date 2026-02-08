@@ -6,6 +6,9 @@ class AppPlatformException implements Exception {
 
   String get message {
     switch (code) {
+      case 'email-already-in-use': // New modern code
+      case 'ERROR_EMAIL_ALREADY_IN_USE': // Legacy code
+        return 'The email address is already registered. Please use a different email.';
       case 'INVALID_LOGIN_CREDENTIALS':
         return 'Invalid login credentials. Please double-check your information.';
       case 'too-many-requests':
@@ -34,7 +37,7 @@ class AppPlatformException implements Exception {
         return 'Invalid verification ID. Please request a new verification code.';
       case 'quota-exceeded':
         return 'Quota exceeded. Please try again later.';
-    // Add more cases as needed...
+      // Add more cases as needed...
       default:
         return 'An unexpected platform error occurred. Please try again.';
     }

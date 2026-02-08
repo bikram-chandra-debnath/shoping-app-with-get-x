@@ -1,18 +1,15 @@
-
-/// Exception class for handling various errors
-/// 
-class AppExceptions implements Exception{
+/// Exception class for handling various errors.
+class AppExceptions implements Exception {
+  /// The associated error message.
   final String message;
 
-// Default constructor with a generic error message.
+  /// Default constructor with a generic error message.
+  const AppExceptions([this.message = 'An unexpected error occurred. Please try again.']);
 
-  const AppExceptions([this.message = "An unexpected error occurred. Please try again."]);
-
-// Create an authentication exception from a Firebase authentication exception code.
-factory AppExceptions.fromCode(String code){
-
-switch (code){
-  case 'email-already-in-use':
+  /// Create an authentication exception from a Firebase authentication exception code.
+  factory AppExceptions.fromCode(String code) {
+    switch (code) {
+      case 'email-already-in-use':
         return const AppExceptions('The email address is already registered. Please use a different email.');
       case 'invalid-email':
         return const AppExceptions('The email address provided is invalid. Please enter a valid email.');
@@ -54,7 +51,6 @@ switch (code){
         return const AppExceptions('Quota exceeded. Please try again later.');
       default:
         return const AppExceptions();
-}
-}
-
+    }
+  }
 }
