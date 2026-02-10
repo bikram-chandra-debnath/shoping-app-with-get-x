@@ -9,8 +9,8 @@ import 'package:shopping_app_with_getx/utils/popups/snackbar_helpers.dart';
 
 class VerifyEmailController extends GetxController {
   static VerifyEmailController get instance => Get.find();
-
-  void oninit() {
+@override
+  void onInit() {
     sendEmailVerification();
     setTimerForAutoRedirect();
     super.onInit();
