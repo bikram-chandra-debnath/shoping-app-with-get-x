@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shopping_app_with_getx/common/widgets/text/section_heading.dart';
-import 'package:shopping_app_with_getx/features/authentication/screens/login/login_screen.dart';
+import 'package:shopping_app_with_getx/data/repository/authentication_repository.dart';
 import 'package:shopping_app_with_getx/features/personalization/screens/address/address_screen.dart';
 import 'package:shopping_app_with_getx/features/personalization/screens/profile/widgets/profile_primary_header.dart';
 import 'package:shopping_app_with_getx/features/personalization/screens/profile/widgets/settings_menu_tile.dart';
@@ -61,7 +61,7 @@ class ProfileScreen extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: OutlinedButton(
-                      onPressed: () => Get.offAll(() => LoginScreen()),
+                      onPressed: AuthenticationRepository.instance.logout,
                       child: Text("Logout"),
                     ),
                   ),
